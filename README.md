@@ -12,6 +12,15 @@ Instead of using a keyboard, I use a physical controller with a gyroscope to mov
 
 ![Spaceship Upgrades](assets/upgrades.png)
 
+
+
+## Gameplay Demo
+
+Watch the IMU Space Shooter in action:
+
+[![Watch Gameplay Demo](assets/gameplay.png)](https://www.tiktok.com/@johndy.3/video/7711426449747479829?is_from_webapp=1&sender_device=pc&web_id=7551035884972312072)
+
+
 ## Features
 
 - Motion-controlled spaceship movement
