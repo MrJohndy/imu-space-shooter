@@ -1,25 +1,38 @@
-
 # IMU Space Shooter
 
-I built this project to experiment with using an Arduino and gyroscope as a physical game controller. Instead of using a keyboard, I tilt the controller to move the spaceship.
+A personal project combining Arduino, an IMU sensor, and Python to create a motion-controlled space shooter.
 
-The game is made with Python and Pygame and features asteroids, enemy aliens, power-ups, and boss battles.
+Instead of using a keyboard, I use a physical controller with a gyroscope to move the spaceship by tilting it.
+
+## Gameplay
+
+![Gameplay](assets/gameplay.png)
+
+![Boss Fight](assets/boss-fight.png)
+
+![Spaceship Upgrades](assets/upgrades.png)
 
 ## Features
 
-- IMU-controlled spaceship movement
+- Motion-controlled spaceship movement
 - Automatic shooting
 - Multiple asteroid types
-- Enemy aliens with different attacks
+- Enemy aliens with different attack patterns
 - Boss battles with unique abilities
 - Power-ups and permanent upgrades
-- Increasing difficulty
-- Procedurally generated graphics
+- Increasing difficulty over time
+- Procedurally generated game graphics
 
 ## Hardware
 
-- Arduino UNO
+The project uses an Arduino-based IMU controller to capture the player's physical movements.
+
+![Arduino and IMU Hardware Setup](assets/hardware-setup.jpg)
+
+**Components:**
+- Arduino Nano
 - LSM6DSV IMU sensor
+- Breadboard and jumper wires
 - USB serial connection
 
 ## Technologies
@@ -28,36 +41,48 @@ The game is made with Python and Pygame and features asteroids, enemy aliens, po
 - Pygame
 - PySerial
 - Arduino IDE
+- C++ (Arduino)
 
-## Installation
+## How to Run
 
-Install the required Python packages:
+1. Clone this repository.
+2. Install the Python dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Upload the Arduino sketch from the `arduino` folder to your Arduino UNO.
+3. Upload the Arduino sketch from the `arduino` folder.
+4. Connect the Arduino to your computer.
+5. Check and update the serial port in the Python script if necessary.
+6. Start the game:
 
-Connect your Arduino to your computer and check the serial port configured in the Python file.
+   ```bash
+   python imu_space_shooter.py
+   ```
 
-Run the game:
+## Hardware Wiring
 
-```bash
-python imu_space_shooter.py
-```
+### Arduino Nano to LSM6DSV
 
-## Controls
+| LSM6DSV | Arduino Nano |
+|---|---|
+| VCC | 3.3V |
+| GND | GND |
+| SDA | A4 |
+| SCL | A5 |
 
-- Tilt the controller to move.
-- Shooting is automatic.
-- Avoid asteroids and enemy attacks.
-- Defeat bosses to unlock upgrades.
+### Communication Settings
+
+- Interface: I2C
+- I2C Address: `0x6A`
+- Serial Baud Rate: `115200`
+
 
 ## Project Status
 
-Currently developed as a personal robotics and programming project.
+This is a temporary personal project. I might improve the physical controller, add more game mechanics, and eventually make the controller wireless in the future.
 
 ## Author
 
-Johndy Q. Salomon
+**Johndy Q. Salomon**
