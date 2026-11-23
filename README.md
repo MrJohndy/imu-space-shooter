@@ -61,16 +61,19 @@ The project uses an Arduino-based IMU controller to capture the player's physica
    python imu_space_shooter.py
    ```
 
+
 ## Hardware Wiring
 
 ### Arduino Nano to LSM6DSV
 
-| LSM6DSV | Arduino Nano |
+| LSM6DSV Pin | Arduino Nano |
 |---|---|
 | VCC | 3.3V |
 | GND | GND |
 | SDA | A4 |
 | SCL | A5 |
+| SDO | GND |
+| CS | 3.3V |
 
 ### Communication Settings
 
